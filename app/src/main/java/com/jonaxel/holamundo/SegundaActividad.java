@@ -2,26 +2,69 @@ package com.jonaxel.holamundo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.internal.widget.AdapterViewCompat;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-/**
- * Created by jonathan on 30/01/15.
- */
 public class SegundaActividad extends Activity {
 
-    TextView textView;
+    ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.segunda_actividad);
 
-        textView = (TextView) findViewById(R.id.textView2);
+        listView = (ListView) findViewById(R.id.listview);
 
-        Bundle extras = getIntent().getExtras();
+        String[] datos = new String[] {
+                "Mercurio",
+                "Venus",
+                "Tierra",
+                "Marte",
+                "Jupiter",
+                "Urano",
+                "Neptuno",
+                "Venus",
+                "Tierra",
+                "Marte",
+                "Jupiter",
+                "Urano",
+                "Neptuno",
+                "Venus",
+                "Tierra",
+                "Marte",
+                "Jupiter",
+                "Urano",
+                "Neptuno",
+                "Venus",
+                "Tierra",
+                "Marte",
+                "Jupiter",
+                "Urano",
+                "Neptuno",
+                "Pluton"
+        };
 
-        String datoActividad = extras.getString("texto");
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datos);
 
-        textView.setText(datoActividad);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                String dato = (String) listView.getItemAtPosition(position);
+
+                Toast.makeText(getApplication(), dato, Toast.LENGTH_LONG).show();
+
+            }
+        });
 
     }
 }
