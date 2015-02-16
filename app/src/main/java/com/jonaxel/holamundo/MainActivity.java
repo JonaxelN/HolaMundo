@@ -7,12 +7,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
 
-    Button buttonActividad;
+    Button botonSimple;
+    Button botonPersonalizada;
 
     EditText myEditText;
 
@@ -22,15 +22,24 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         myEditText = (EditText) findViewById(R.id.textoeditable);
-        buttonActividad = (Button) findViewById(R.id.button2);
+        botonSimple = (Button) findViewById(R.id.button2);
+        botonPersonalizada = (Button) findViewById(R.id.boton_lista_personalizada);
 
-        buttonActividad.setOnClickListener(new View.OnClickListener() {
+        botonSimple.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String dato = myEditText.getText().toString();
 
-                Intent intent = new Intent(MainActivity.this, SegundaActividad.class);
+                Intent intent = new Intent(MainActivity.this, ListaSimple.class);
                 intent.putExtra("texto", dato);
+                startActivity(intent);
+            }
+        });
+
+        botonPersonalizada.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListaPersonalizada.class);
                 startActivity(intent);
             }
         });

@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SegundaActividad extends Activity {
+public class ListaSimple extends Activity {
 
     ListView listView;
 

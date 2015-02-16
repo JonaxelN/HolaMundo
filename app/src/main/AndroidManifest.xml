@@ -16,13 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".SegundaActividad"
-            android:label="segunda_actividad"
-            />
-
-
+            android:name=".ListaSimple"
+            android:label="segunda_actividad" />
+        <activity
+            android:name=".ListaPersonalizada"
+            android:label="@string/title_activity_lista_personalizada" >
+        </activity>
     </application>
 
 </manifest>

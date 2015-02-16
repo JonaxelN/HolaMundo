@@ -14,7 +14,15 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar Actividad"
+        android:text="Lista Simple"
         android:id="@+id/button2"
         android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/boton_lista_personalizada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista personalizada"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>
