@@ -45,6 +45,7 @@ public class AdapterCarro extends BaseAdapter {
         View itemView = convertView;
 
         if (itemView == null) {
+
             itemView = inflater.inflate(R.layout.item_row, parent, false);
             itemView.setTag(holder);
         }
