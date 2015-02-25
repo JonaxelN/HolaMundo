@@ -44,17 +44,22 @@ public class AdapterCarro extends BaseAdapter {
         ViewHolder holder = new ViewHolder();
         View itemView = convertView;
 
-        if (itemView == null) {
+        //Find the client to work with
+        modelo = listaArrays.get(position);
 
+        if (itemView == null) {
+            inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             itemView = inflater.inflate(R.layout.item_row, parent, false);
             itemView.setTag(holder);
+        } else {
+            holder = (ViewHolder) itemView.getTag();
         }
-
         holder.anio = (TextView) itemView.findViewById(R.id.text_anio);
         holder.modelo = (TextView) itemView.findViewById(R.id.text_modelo);
         holder.marca = (TextView) itemView.findViewById(R.id.text_marca);
 
-        holder.anio.setText(modelo.getAnio());
+
+        holder.anio.setText("" + modelo.getAnio());
         holder.modelo.setText(modelo.getModelo());
         holder.marca.setText(modelo.getMarca());
 

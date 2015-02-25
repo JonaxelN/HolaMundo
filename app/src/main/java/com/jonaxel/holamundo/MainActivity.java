@@ -13,6 +13,7 @@ public class MainActivity extends Activity {
 
     Button botonSimple;
     Button botonPersonalizada;
+    Button botonFutbol;
 
     EditText myEditText;
 
@@ -24,6 +25,7 @@ public class MainActivity extends Activity {
         myEditText = (EditText) findViewById(R.id.textoeditable);
         botonSimple = (Button) findViewById(R.id.button2);
         botonPersonalizada = (Button) findViewById(R.id.boton_lista_personalizada);
+        botonFutbol = (Button) findViewById(R.id.boton_lista_futbol);
 
         botonSimple.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,14 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListaPersonalizada.class);
+                startActivity(intent);
+            }
+        });
+
+        botonFutbol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListaFutbol.class);
                 startActivity(intent);
             }
         });

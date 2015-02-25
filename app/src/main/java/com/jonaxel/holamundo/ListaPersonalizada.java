@@ -31,6 +31,7 @@ public class ListaPersonalizada extends Activity {
         mCarro.add(new CarroModelo("Volkswagen", "Vocho", 1950));
         mCarro.add(new CarroModelo("Chevrolet", "Cheyene", 2005));
         mCarro.add(new CarroModelo("Renault", "Clio", 2000));
+        mCarro.add(new CarroModelo("Renault", "Clio", 2000));
     }
 
     private void llenarListView() {

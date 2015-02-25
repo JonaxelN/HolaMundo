@@ -23,6 +23,10 @@
             android:name=".ListaPersonalizada"
             android:label="@string/title_activity_lista_personalizada" >
         </activity>
+        <activity
+            android:name=".ListaFutbol"
+            android:label="@string/title_activity_lista_futbol" >
+        </activity>
     </application>
 
 </manifest>
