@@ -47,6 +47,7 @@ public class AdapterCarro extends BaseAdapter {
         //Find the client to work with
         modelo = listaArrays.get(position);
 
+
         if (itemView == null) {
             inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             itemView = inflater.inflate(R.layout.item_row, parent, false);
